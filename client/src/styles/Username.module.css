@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,700&display=swap');
+
+.glass {
+    background: rgba(255, 255, 255, 0.55);
+    border-radius:  16px;
+    box-shadow: 0 4px 30px #4747470b;
+    backdrop-filter: blur(7.1px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    @apply border-4 border-gray-50 shrink-0 w-[100%] max-w-[700px] rounded-3xl py-12 px-7 mx-auto lg:w-1/2
+}
+
+.icon_img {
+    @apply border-4 border-gray-100 w-[125px] h-[125px] object-cover rounded-full shadow-lg cursor-pointer;
+    @apply hover:border-gray-200;
+}
+
+.textbox {
+    @apply relative border-0 p-3 rounded-xl w-full max-w-[300px] shadow-md text-sm text-gray-600 bg-white lg:text-base lg:px-4 lg:py-3;
+    @apply focus:outline-none;
+}
+
+.btn {
+    @apply bg-theme-light-blue text-white border py-2.5 rounded-lg w-full max-w-[300px] shadow-md text-lg text-center lg:text-lg lg:py-3;
+}
+
+.btn:hover {
+    @apply bg-theme-blue;
+}
+
+input[type='file'] {
+    display: none;
+}

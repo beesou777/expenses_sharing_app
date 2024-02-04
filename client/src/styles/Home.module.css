@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,700&display=swap');
+
+@tailwind utilities;
+@layer utilities  {
+    .pt-safe {
+        padding-top: calc(20px + env(safe-area-inset-top));
+    }
+    .pb-safe {
+        padding-bottom: calc(20px + env(safe-area-inset-bottom));
+    }
+    .glass-pt-safe {
+        padding-top: calc(96px + env(safe-area-inset-top));;
+    }
+}
+
+.container {
+    background-color: white;
+    @apply flex min-h-screen w-full flex-col relative lg:mx-auto lg:flex-row;
+}
+
+.nav {
+    background: linear-gradient(102.87deg, rgba(86, 158, 194, 0.2) 28.76%, rgba(163, 196, 213, 0.2) 44.56%, rgba(230, 230, 230, 0.2) 54.38%, rgba(198, 176, 191, 0.2) 64.19%, rgba(159, 109, 144, 0.2) 81.09%), #FFFFFF;
+    @apply w-full px-5 pt-safe pb-5 fixed top-0 left-0 rounded-b-2xl shadow-md lg:w-[290px] z-10 lg:min-h-screen lg:flex lg:flex-col lg:justify-center lg:items-center ;
+}
+
+.glass {
+    background: linear-gradient(102.87deg, rgba(86, 158, 194, 0.11) 28.76%, rgba(163, 196, 213, 0.11) 44.56%, rgba(230, 230, 230, 0.11) 54.38%, rgba(198, 176, 191, 0.11) 64.19%, rgba(159, 109, 144, 0.11) 81.09%), #FFFFFF;
+    @apply border-gray-50 w-full min-h-screen px-5 glass-pt-safe pb-safe relative z-0 lg:pt-5 lg:pl-[290px] lg:border-0 lg:mb-0;
+}
+
+.textbox {
+    @apply relative border-0 p-3 rounded-xl w-full max-w-[300px] shadow-md text-sm text-gray-600 bg-white lg:text-base lg:px-4 lg:py-3 lg:max-w-[200px];
+    @apply focus:outline-none;
+}
+
+.textbox_disable {
+    @apply relative border-0 p-3 rounded-xl w-full max-w-[300px] shadow-md text-sm text-gray-500 bg-gray-200 lg:text-base lg:px-4 lg:py-3 lg:max-w-[200px];
+    @apply focus:outline-none;
+}
+
+.inputbox {
+    @apply relative border-0 p-3 rounded-xl w-full max-w-[300px] shadow-md text-sm text-gray-600 bg-white lg:text-base lg:px-4 lg:py-3 lg:max-w-[200px];
+    @apply focus:outline-none;
+    @apply cursor-pointer;
+}
+
+.icon_img_edit{
+    @apply border-4 border-gray-100 w-[125px] h-[125px] object-cover rounded-full shadow-lg cursor-pointer lg:w-[200px] lg:h-[200px];
+    @apply hover:border-gray-200;
+}
